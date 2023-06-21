@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/users")
+    fetch("https://user-management-server-sigma.vercel.app/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
@@ -27,7 +27,7 @@ const Home = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/user/${id}`, {
+        fetch(`https://user-management-server-sigma.vercel.app/user/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -48,7 +48,7 @@ const Home = () => {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/user", {
+    fetch("https://user-management-server-sigma.vercel.app/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

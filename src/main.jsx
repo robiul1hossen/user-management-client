@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   {
     path: "/update/:id",
     element: <Updateuser></Updateuser>,
-    loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`),
+    loader: ({ params }) => fetch(`https://user-management-server-sigma.vercel.app/users/${params.id}`),
   },
 ]);
 

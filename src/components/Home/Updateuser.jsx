@@ -15,7 +15,7 @@ const Updateuser = () => {
     const phone = form.phone.value;
     const updatedData = { name, email, phone };
 
-    fetch(`http://localhost:5000/user/${_id}`, {
+    fetch(`https://user-management-server-sigma.vercel.app/user/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
